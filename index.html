@@ -3,63 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing Page</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      padding: 20px;
-    }
+  <link rel="icon" type="image/png" href="images/resuorceLogo.png" />
+  <title>ReSource</title>
 
-    h1 {
-      color: #333;
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
+  <!-- קובץ CSS חיצוני -->
+  <link rel="stylesheet" href="styles/main.css" />
 
-    p {
-      color: #666;
-      font-size: 1.2em;
-      max-width: 600px;
-      margin-bottom: 30px;
-    }
-
-    .cta-button {
-      background-color: #0077cc;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      font-size: 1em;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .cta-button:hover {
-      background-color: #005fa3;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2em;
-      }
-
-      p {
-        font-size: 1em;
-      }
-    }
-  </style>
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Welcome!</h1>
-  <p>This is your space to grab attention – add a short pitch or important info here.</p>
-  <button class="cta-button">Get Started</button>
+  <!-- קו אלכסון - תוכל להחזיר אם תרצה -->
+  <!--
+  <div class="diagonal-line"></div>
+  -->
+
+  <!-- תוכן עליון -->
+  <div class="firstcontent">
+    <svg class="diagonal-line" viewBox="0 0 100 100" preserveAspectRatio="none">
+        <line x1="30" y1="100" x2="63.5" y2="0" stroke="green" stroke-width="2" />
+      </svg>
+    <section class="content1">
+      <h1>Welcome to ReSource</h1>
+      <p><span class="green-word">ReSource</span> Online Platform</p>
+    </section>
+
+    <section class="content2">
+      <p>
+        ReSource is a tech platform that
+        <span class="green-word">transforms online returns</span> into meaningful donations,
+        <span class="green-word">reducing brand logistics costs</span> and
+        <span class="green-word">boosting customer engagement</span> for economic, environmental,
+        and social impact.
+        <br><br>Online Platform
+      </p>
+    </section>
+     <!-- חץ לגלילה למטה -->
+  <a href="#steps" class="scroll-down">↓</a>
+  </div>
+
+ 
+
+  <!-- סקשן המשך -->
+  <section id="steps" class="section-steps">
+    <div class="steps-content">
+      <p>
+        <strong>E-commerce Steps of Returns via ReSource</strong><br><br>
+        Via ReSource, E-commerce retailers will be able to save money on reverse
+        logistics with a shorter circle of return and direct match with an item to an
+        NPO in the local area.<br><br>
+        All sides win.
+      </p>
+    </div>
+  <a href="#steps" class="scroll-down">↓</a>
+
+  </section>
 </body>
 </html>

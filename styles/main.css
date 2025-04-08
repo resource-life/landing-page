@@ -1,0 +1,134 @@
+html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .diagonal-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;       /* לרוחב כל firstcontent */
+    height: 100%;      /* בדיוק לגובה שלו */
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  /* מסך ראשון */
+  .firstcontent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7vw; /* רווח בין תוכן שמאל לימין */
+    height: 100vh;
+    padding: 0 5vw;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* תוכן שמאל + ימין */
+  .content1, .content2 {
+    max-width: 35vw;
+  }
+  
+  /* כותרת ותיאור */
+  .content1 h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .content1 p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+  
+  .content2 {
+    text-align: left;
+    word-wrap: break-word;
+    margin-left: 2vw; /* הזזה ימינה למרחק מהאלכסון */
+  }
+  
+  .content2 p {
+    font-size: 1.4rem;
+    line-height: 1.7;
+  }
+  
+  .green-word {
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* חץ גלילה */
+  .scroll-down {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: green;
+    animation: bounce 2s infinite;
+    z-index: 2;
+  }
+  
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(10px); }
+  }
+  
+  /* מסך שני */
+  .section-steps {
+    padding: 100px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid #e0e0e0;
+  }
+  
+  .steps-content {
+    max-width: 800px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+  }
+  
+  /* רספונסיביות */
+  @media (max-width: 768px) {
+    .firstcontent {
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 20px;
+      height: auto;
+    }
+  
+    .content1, .content2 {
+      max-width: 100%;
+      width: 100%;
+      margin: 20px auto;
+      text-align: center;
+    }
+  
+    .content1 h1, .content2 h1 {
+      font-size: 2rem;
+    }
+  
+    .content1 p, .content2 p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+  
+    .diagonal-line {
+      display: none;
+    }
+  }
+  
