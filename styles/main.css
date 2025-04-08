@@ -15,30 +15,27 @@ html {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;       /* לרוחב כל firstcontent */
-    height: 100%;      /* בדיוק לגובה שלו */
+    width: 100%;       
+    height: 100%;     
     z-index: 0;
     pointer-events: none;
   }
   
-  /* מסך ראשון */
   .firstcontent {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 7vw; /* רווח בין תוכן שמאל לימין */
+    gap: 7vw; 
     height: 100vh;
     padding: 0 5vw;
     position: relative;
     z-index: 1;
   }
   
-  /* תוכן שמאל + ימין */
   .content1, .content2 {
     max-width: 35vw;
   }
   
-  /* כותרת ותיאור */
   .content1 h1 {
     font-size: 3rem;
     margin-bottom: 0.5rem;
@@ -52,7 +49,7 @@ html {
   .content2 {
     text-align: left;
     word-wrap: break-word;
-    margin-left: 2vw; /* הזזה ימינה למרחק מהאלכסון */
+    margin-left: 2vw;
   }
   
   .content2 p {
@@ -65,7 +62,6 @@ html {
     font-weight: bold;
   }
   
-  /* חץ גלילה */
   .scroll-down {
     position: absolute;
     bottom: 40px;
@@ -83,7 +79,6 @@ html {
     50% { transform: translateX(-50%) translateY(10px); }
   }
   
-  /* מסך שני */
   .section-steps {
     padding: 100px 20px;
     background-color: #f4f4f4;
@@ -102,7 +97,6 @@ html {
     text-align: center;
   }
   
-  /* רספונסיביות */
   @media (max-width: 768px) {
     .firstcontent {
       flex-direction: column;
