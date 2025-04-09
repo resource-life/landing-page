@@ -409,4 +409,13 @@ footer img {
     width: 20px;
     height: 20px;
   }
+  .site-header {
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  .site-header .logo {
+    height: 100px; /* גובה הלוגו מוגדל, ניתן להתאים את הערך לפי הצורך */
+  }
+
 }
