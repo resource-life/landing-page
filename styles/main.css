@@ -383,7 +383,8 @@ footer a {
   .firstcontent {
     display: flex;
     align-items: center;
-    min-height: 75vh;
+    justify-content: unset;
+    min-height: 65vh;
     padding: 0px 5vw;
     position: relative;
     z-index: 1;
@@ -409,7 +410,7 @@ footer a {
   .ecommerce-flow {
     flex-direction: column;
     text-align: center;
-    padding: 30px 10px; /* הפחתת ריווח לצורך התאמה למסכי נייד */
+    padding: 40px 5px; /* הפחתת ריווח לצורך התאמה למסכי נייד */
 
   }
   .flow-text {
@@ -433,7 +434,7 @@ footer a {
   .goodbye-section {
     flex-direction: column;
     text-align: center;
-    padding: 60px 20px;
+    padding: 0px 20px 15px;
   }
   .goodbye-text p {
     font-size: 1rem;
