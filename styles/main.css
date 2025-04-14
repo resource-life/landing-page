@@ -351,28 +351,71 @@ body::-webkit-scrollbar {
 
 /* עיצוב הפוטר */
 footer {
-  background-color: #f9f9f9;
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #ccc;
+  background-color: #f8f8f8;       /* רקע בהיר */
+  padding: 40px 20px;              /* ריווח פנימי גדול למראה נעים */
+  text-align: center;              /* מיושר למרכז */
+  color: #333;                     /* צבע טקסט כהה לקריאות */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 footer h3 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;             /* ריווח מתחת לכותרת */
+  font-size: 1.75rem;
+  color: #222;
 }
 
-footer address,
-footer .company-contacts {
-  margin-bottom: 15px;
-  font-style: normal;
+footer address {
+  margin: 0 auto 20px;             /* ממרכז עם ריווח תחתון */
+  font-style: normal;              /* ביטול הדגש של כתיבה ב-address */
   line-height: 1.6;
 }
 
-footer a {
-  text-decoration: none;
-  color: inherit;
+footer address p {
+  margin: 5px 0;
 }
 
+.company-contacts {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.company-contacts p {
+  margin: 5px 0;
+}
+
+footer a {
+  color: #59CB82;                /* צבע קישורים – לדוגמה בגוון LinkedIn */
+  text-decoration: none;
+  transition: text-decoration 0.3s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.linkedin-link svg {
+  width: 40px;
+  height: 40px;
+  fill: #59CB82;
+}
+
+.linkedin-link .linkedin-text {
+  margin-left: 8px;
+  font-size: 1.1rem;
+}
+
+
+footer p {
+  font-size: 0.9rem;
+  color: #777;
+  margin: 0;
+}
 
 /* ===================== Media Queries ===================== */
 @media (max-width: 768px) {
@@ -468,3 +511,23 @@ footer a {
   }
 
 }
+
+/* 
+.linkedin-link {
+  display: flex;
+  align-items: center; /* ממרכז אנכית */
+  text-decoration: none; /* להסרת קו תחתון אם נדרש */
+}
+
+/* עיצוב עבור מסכים קטנים */
+@media (max-width: 768px) {
+  .linkedin-link {
+    flex-direction: column; /* מחזיר את הכיתוב מתחת לאייקון */
+    align-items: center;    /* ממרכז גם במצב עמודה */
+  }
+  
+  /* עדכון מרווח – במקרה שהמרווח בין האייקון לכיתוב עדיין נשאר מיושם */
+  .linkedin-text {
+    margin: 8px 0 0 0; /* מעבר מ-margin-left ל-margin-top */
+  }
+} */
