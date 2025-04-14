@@ -380,6 +380,14 @@ footer a {
     flex-direction: column;
     text-align: center;
   }
+  .firstcontent {
+    display: flex;
+    align-items: center;
+    min-height: 75vh;
+    padding: 0px 5vw;
+    position: relative;
+    z-index: 1;
+}
   .firstcontent .section-content {
     flex-direction: column;
     align-items: center;
@@ -401,7 +409,17 @@ footer a {
   .ecommerce-flow {
     flex-direction: column;
     text-align: center;
-    padding: 60px 20px;
+    padding: 30px 10px; /* הפחתת ריווח לצורך התאמה למסכי נייד */
+
+  }
+  .flow-text {
+    padding-left: 15px;
+    padding-right: 15px;
+    /* ניתן להוסיף שינויים נוספים כגון:
+       line-height: 1.5;
+       margin: 0 auto; 
+       text-align: justify; 
+    */
   }
   .flow-text h2 {
     font-size: 1.6rem;
