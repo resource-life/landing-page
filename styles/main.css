@@ -81,15 +81,19 @@ body::-webkit-scrollbar {
   text-align: center;
   animation: slideInRight 1s ease-out both;
 }
+
 .welcome-image img {
-  max-width: 100%;
+  width: 80%;       /* קובע שהרוחב יהיה 80% מרוחב המיכל */
+  max-width: 500px; /* קובע גודל מקסימלי של 500px כדי שהתמונה לא תתרחב מעבר לכך */
   border-radius: 30px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
 }
+
 .welcome-image img:hover {
   transform: scale(1.03);
 }
+
 .scroll-down {
   position: absolute;
   bottom: 40px;
@@ -199,6 +203,8 @@ body::-webkit-scrollbar {
 .flow-text {
   flex: 1;
   min-width: 300px;
+  max-width: 600px; /* או כל ערך שמתאים לעיצוב שלך */
+  margin: 0 auto;
 }
 .flow-text h2 {
   font-size: 2rem;
@@ -214,17 +220,18 @@ body::-webkit-scrollbar {
 .process-wrapper {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
   position: relative;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 1200px;
+  max-width: 100%;
   width: 100%;
 }
 .step {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   justify-content: flex-start;
   padding: 15px;
   background: #fff;
@@ -257,92 +264,115 @@ body::-webkit-scrollbar {
 .step:hover img {
   transform: scale(1.1);
 }
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2rem;
-  color: #59CB82;
-  transition: left 1s ease-in-out;
-  z-index: 0;
-}
+
+
 @keyframes arrowMove {
-  0% { left: 2%; }
-  16% { left: 18%; }
-  32% { left: 34%; }
-  48% { left: 50%; }
-  64% { left: 66%; }
-  80% { left: 82%; }
+  0% {
+    left: 24%;
+    transform: translateY(-50%) scaleX(1);
+  }
+  45% {
+    left: 75%;
+    transform: translateY(-50%) scaleX(1);
+  }
+  55% {
+    left: 75%;
+    transform: translateY(-50%) scaleX(-1);
+  }
   100% {
-    left: 2%;
+    left: 24%;
     transform: translateY(-50%) scaleX(-1);
   }
 }
+
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  left: 24%;
+  transform: translateY(-50%) scaleX(1);
+  font-size: 2.5rem;
+  color: #59CB82;
+  z-index: 0;
+  animation: arrowMove 8s ease-in-out infinite;
+}
+
+
 .arrow.animate {
   animation: arrowMove 10s linear infinite;
 }
 
 /* ===================== Goodbye Section ===================== */
+/* מיכל עוטף עבור החלק התחתון */
+.bottom-container {
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 40px auto;
+
+}
+
+/* עיצוב ה-goodbye-section */
 .goodbye-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 5vw;
   flex-wrap: wrap;
-  background-color: #ffffff;
-  width: 100%;
 }
+
 .goodbye-text {
   flex: 1;
-  min-width: 280px;
+  font-size: 1.1rem;
+  color: #333;
 }
+
 .goodbye-text p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin: 0 0 20px;
+  margin: 10px 0;
 }
+
 .goodbye-image {
   flex: 1;
   text-align: center;
-}
-.goodbye-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 20px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-.goodbye-image img:hover {
-  transform: scale(1.05);
+  animation: slideInRight 1s ease-out both;
 }
 
-/* ===================== Footer ===================== */
+.goodbye-image img {
+  width: 80%;      /* מגדיל את התמונה ל-80% מרוחב המיכל */
+  max-width: 500px; /* קובע גודל מקסימלי של 500px */
+  height: auto;    /* שומר על יחס המימדים של התמונה */
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.goodbye-image img:hover {
+  transform: scale(1.03);
+}
+
+
+/* עיצוב הפוטר */
 footer {
-  background-color: #f4f4f4;
-  padding: 40px 5vw;
+  background-color: #f9f9f9;
+  padding: 20px;
   text-align: center;
-  width: 100%;
-  margin-top: auto;
+  border-top: 1px solid #ccc;
 }
+
 footer h3 {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
-footer p {
-  margin: 5px 0;
-  font-size: 0.95rem;
-  color: #555;
+
+footer address,
+footer .company-contacts {
+  margin-bottom: 15px;
+  font-style: normal;
+  line-height: 1.6;
 }
+
 footer a {
-  color: #59CB82;
   text-decoration: none;
-  font-weight: 500;
+  color: inherit;
 }
-footer a:hover {
-  text-decoration: underline;
-}
-footer img {
-  vertical-align: middle;
-}
+
 
 /* ===================== Media Queries ===================== */
 @media (max-width: 768px) {
