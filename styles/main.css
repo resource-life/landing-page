@@ -47,7 +47,7 @@ body::-webkit-scrollbar {
   }
 }
 
-/* ===================== ברוכים הבאים ===================== */
+
 .welcome {
   display: flex;
   flex-direction: column;
