@@ -12,6 +12,7 @@ html, body {
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  background-color: #f4f4f4;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -54,7 +55,7 @@ body::-webkit-scrollbar {
   justify-content: center;
   padding: 100px 5vw;
   min-height: 100vh;
-  background-color: #fff;
+  /* background-color: #fff; */
   gap: 50px;
   position: relative;
   animation: fadeInUp 1.2s ease-out both;
@@ -317,6 +318,7 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
+  background-color: #f4f4f4;
 }
 
 .goodbye-text {
